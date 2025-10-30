@@ -11,7 +11,7 @@ const firebaseConfig = {
     projectId: "ai-mood-journal-app",
     storageBucket: "ai-mood-journal-app.firebasestorage.app",
     messagingSenderId: "1050742242581",
-    appId: "",
+    appId: "1:1050742242581:web:xxxxxxxxxxxxxxxxxxxx",
     measurementId: ""
 };
 
