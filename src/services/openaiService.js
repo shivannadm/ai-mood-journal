@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 // TODO: Replace with YOUR OpenAI API key
-const OPENAI_API_KEY = '';
+const OPENAI_API_KEY = 'YOUR_OPENAI_API';
 const API_URL = 'https://api.openai.com/v1/chat/completions';
 
 export const analyzeMoodWithAI = async (journalEntry) => {

@@ -1,29 +1,46 @@
 // src/config/firebaseConfig.js
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import { initializeApp } from 'firebase/app';
-import { getReactNativePersistence, initializeAuth } from 'firebase/auth';
+import { getAuth } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
 
-// TODO: Replace with YOUR Firebase config
+// Your web app's Firebase configuration
+// Get this from Firebase Console > Project Settings > Your apps > Firebase SDK snippet
 const firebaseConfig = {
     apiKey: "",
     authDomain: "ai-mood-journal-app.firebaseapp.com",
     projectId: "ai-mood-journal-app",
     storageBucket: "ai-mood-journal-app.firebasestorage.app",
     messagingSenderId: "1050742242581",
-    appId: "1:1050742242581:web:10",
-    measurementId: "G-2QWW"
+    appId: "",
+    measurementId: ""
 };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
+// Initialize Firebase with error handling
+let app;
+let auth;
+let db;
 
-// Initialize Auth with persistence
-export const auth = initializeAuth(app, {
-    persistence: getReactNativePersistence(AsyncStorage)
-});
+try {
+    app = initializeApp(firebaseConfig);
+    auth = getAuth(app);
+    db = getFirestore(app);
+    console.log('✅ Firebase initialized successfully');
+} catch (error) {
+    console.error('❌ Firebase initialization error:', error);
+    console.error('Please check your firebaseConfig values');
 
-// Initialize Firestore
-export const db = getFirestore(app);
+    // Create mock auth object to prevent crashes
+    // This allows the app to load even if Firebase fails
+    auth = {
+        currentUser: null,
+        onAuthStateChanged: (callback) => {
+            callback(null);
+            return () => { };
+        }
+    };
 
+    db = null;
+}
+
+export { auth, db };
 export default app;

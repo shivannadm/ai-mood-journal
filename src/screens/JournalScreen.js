@@ -1,15 +1,15 @@
-// src/screens/TrendsScreen.js
+// src/screens/JournalScreen.js
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
-export default function TrendsScreen({ navigation }) {
+export default function JournalScreen({ navigation }) {
     return (
         <View style={styles.container}>
-            <Text style={styles.title}>📊 Mood Trends</Text>
+            <Text style={styles.title}>📝 New Journal Entry</Text>
 
             <View style={styles.content}>
-                <Text style={styles.text}>Trends screen coming soon!</Text>
+                <Text style={styles.text}>Journal entry screen coming soon!</Text>
                 <Text style={styles.description}>
-                    Here you'll see your mood patterns over time
+                    Here you'll be able to record your daily mood and thoughts
                 </Text>
             </View>
 
