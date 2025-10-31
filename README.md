@@ -20,7 +20,7 @@ An intelligent mobile application built with React Native (Expo) that helps user
 - 📊 Visualize emotional patterns over time
 - 💡 Receive personalized wellness suggestions
 
-Built as part of **Task 9: Vibe Coding Sprint** to demonstrate rapid app development using AI-assisted coding tools.
+Built as part of **Vibe Coding Sprint** to demonstrate rapid app development using AI-assisted coding tools.
 
 ---
 
