@@ -6,13 +6,13 @@ import { getFirestore } from 'firebase/firestore';
 // Your web app's Firebase configuration
 // Get this from Firebase Console > Project Settings > Your apps > Firebase SDK snippet
 const firebaseConfig = {
-    apiKey: "",
+    apiKey: "YOUR_API_KEY_HERE",
     authDomain: "ai-mood-journal-app.firebaseapp.com",
     projectId: "ai-mood-journal-app",
     storageBucket: "ai-mood-journal-app.firebasestorage.app",
     messagingSenderId: "1050742242581",
-    appId: "",
-    measurementId: ""
+    appId: "1:1050742242581:web:1058e0accdea8561387d1c",
+    measurementId: "G-2QWW4RDHHD"
 };
 
 // Initialize Firebase with error handling

@@ -139,6 +139,13 @@ export default function JournalScreen({ navigation }) {
 
                 {analysis && (
                     <View style={styles.analysisContainer}>
+                        {analysis.aiPowered !== undefined && (
+                            <View style={styles.aiBadge}>
+                                <Text style={styles.aiText}>
+                                    {analysis.aiPowered ? '🤖 AI-Powered Analysis' : '📝 Rule-Based Analysis'}
+                                </Text>
+                            </View>
+                        )}
                         <View style={[styles.moodCard, { borderColor: getMoodColor(analysis.mood) }]}>
                             <Text style={styles.moodEmoji}>{getMoodEmoji(analysis.mood)}</Text>
                             <Text style={styles.moodText}>

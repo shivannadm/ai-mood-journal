@@ -73,6 +73,10 @@ export default function WelcomeScreen({ navigation }) {
                     <Text style={styles.switchText}>
                         {isLogin ? "Don't have an account? Sign Up" : 'Already have an account? Login'}
                     </Text>
+                    <Text style={styles.switchText}>
+        
+                        {'Use: Email: test@test.com Password: test123 .'}
+                    </Text>
                 </TouchableOpacity>
             </View>
         </KeyboardAvoidingView>
